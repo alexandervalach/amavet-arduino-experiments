@@ -15,13 +15,12 @@ Senzor má 4 základný piny:
 
 Využijeme 3 z nich: A0, GND a VCC.
 
+![Senzor MQ-3 na meranie hladiny alkoholu v dychu](https://github.com/alexandervalach/amavet-arduino-experiments/raw/main/01%20-%20Alkohol%20tester/Obr%C3%A1zky/mq-3%20senzor%20-%20alkohol%20detektor.jpg)
+
 ## Zapojenie
 
 ## Pridanie kódu
-Napätie genrovaná na senzore pri chemickou jave je závislé od okolitej teploty (teploty v miestnosti alebo danom prostredí). 
-Preto je vhodné senzor MQ-3 v miestnosti pred prezentovaním kalibrovať (upraviť hodnoty).
-Tu pomôžu dvaja animátori. Jeden nebude mať v dychu alkohol a druhý ho bude mať (tým, že si napríklad vypláchne pusu ústnou vodou s alkoholom).
-Podľa výslednych hodnôt napätia upravíme kód na hranice tak, aby sa červená LED rozsvietila v prípade prítomnosti alkoholu v dychu.
+Napätie genrovaná na senzore pri chemickou jave je závislé od okolitej teploty (teploty v miestnosti alebo danom prostredí). Preto je vhodné senzor MQ-3 v miestnosti pred prezentovaním kalibrovať (upraviť hodnoty). Tu pomôžu dvaja animátori. Jeden nebude mať v dychu alkohol a druhý ho bude mať (tým, že si napríklad vypláchne pusu ústnou vodou s alkoholom). Podľa výslednych hodnôt napätia upravíme kód na hranice tak, aby sa červená LED rozsvietila v prípade prítomnosti alkoholu v dychu.
 
 ## Jav
 Ak je v dychu prítomný alkohol, rozsvieti sa červená LED dióda.
