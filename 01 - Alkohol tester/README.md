@@ -6,16 +6,25 @@
 - LED dióda ľubovoľnej farby
 - 3-krát kábel SAMEC-SAMIČKA
 
-## Zapojenie
-
-### Senzor
+## Senzor
 Senzor má 4 základný piny:
 - AO - analógový výstup (Analog Output)
 - DO - digitálny výstup (Digital Output)
 - GND - uzemnenie (Ground)
 - VCC - napätie (Voltage at the Common Collector)
 
-Využijeme 3 z nich. VCC zapojíme na 
+Využijeme 3 z nich: A0, GND a VCC.
+
+## Zapojenie
+
+## Pridanie kódu
+Napätie genrovaná na senzore pri chemickou jave je závislé od okolitej teploty (teploty v miestnosti alebo danom prostredí). 
+Preto je vhodné senzor MQ-3 v miestnosti pred prezentovaním kalibrovať (upraviť hodnoty).
+Tu pomôžu dvaja animátori. Jeden nebude mať v dychu alkohol a druhý ho bude mať (tým, že si napríklad vypláchne pusu ústnou vodou s alkoholom).
+Podľa výslednych hodnôt napätia upravíme kód na hranice tak, aby sa červená LED rozsvietila v prípade prítomnosti alkoholu v dychu.
+
+## Jav
+Ak je v dychu prítomný alkohol, rozsvieti sa červená LED dióda.
 
 ## Vysvetlenie javu
 Etanol (alkohol) nachádzajúci sa v dychu po požití alkoholických nápojov sa oxiduje pri anóde:
