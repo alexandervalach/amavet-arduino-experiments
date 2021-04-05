@@ -20,7 +20,7 @@ Keď na fitnes náramku zvolíte akciu merania pulzu a obrátite ho naruby, tak 
 
 Senzor ovládame pomocou I2C rozhrania.
 
-![Vývojový kit s čipom MAX30105](https://github.com/alexandervalach/amavet-arduino-experiments/raw/main/01%20-%20Alkohol%20tester/Obr%C3%A1zky/mq-3%20senzor%20-%20alkohol%20detektor.jpg)
+![Vývojový kit s čipom MAX30105](https://github.com/alexandervalach/amavet-arduino-experiments/raw/main/02%20-%20Meranie%20pulzu/Obr%C3%A1zky/max30105%20-%20detektor%20castic.jpg)
 
 
 ## Zapojenie
