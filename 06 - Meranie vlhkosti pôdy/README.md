@@ -1,38 +1,40 @@
-# Detekcia pádu
+# Meranie vlhkosti pôdy
 
 ## Príprava
 - Arduino UNO
-- Modul MPU6050
-- bzučiak (angl. buzzer)
+- Senzor na meranie vlhkosti pôdy (napríklad ER-SPM32100S)
+- Zelená (modrá) LED dióda
 - 8-krát kábel SAMEC-SAMIČKA
 
+Pripravíme si kvetináč so suchou a druhý s vlhkou zeminou.
+Alternatívne je možné použiť sklenený pohár naplnený vodou.
+Plastový sa neodporúča, pretože je veľmi ľahké ho pri manipulácii prevrátiť.
+
+Senzor sa pri dlhšom používaní oxiduje a stráca svoju presnosť.
+Preto je dôležité uchovávať ho v obale (napr. plastovom púzde, v ktorom bol pôvodne zabalený).
+
 ## Knižnice
-- Je nutné pridať externú knižnicu do Arduino IDE
-- Konkrétne MPU6050_tckn v najnovšej verzii
-- Knižnica slúži na komunikáciu s akcelerometrom prostredníctvom I2C rozhrania. Je malá a má spoľahlivú kalibráciu. 
-- Je možne využiť aj iné knižnice, ale nemusia byť schopné správne kalibrovať senzor (zaseknú sa na kalibrácii alebo kalibrujú senzor do nekonečna).
+- Nie je nutné pridávať externé knižnice
+- Arduino totiž prečíta iba nameranú hodnotu napätia a podľa nej dokáže vyhodnotiť vlhkosť pôdy
+- Podobne ako alkohol tester, aj tento senzor sa odporúča vopred ho nastaviť, ešte pred demonštráciou
 
 ## Komponenty
-### Modul MPU6050
-- Modul MPU6050 má v sebe zabudovaný akcelerometer, gyroskop a navyše aj teplomer merajúci teplotu okolia, ktorý však nebudeme využívať
+### Senzor na meranie vlhkosti pôdy (ER-SPM32100S)
 
-### Bzučiak
-Jeho úlohou je zvukovým signálom oznámiť vznik určitej udalosti. Napríklad náramok vyhodnotil udalosť ako voľný pád (angl. free fall). Alebo náramok nie je schopný kalibrovať MPU6050
+### LED dióda
+Je dobré použiť farbu, ktorá je viditeľná na otvorenom svetle, kde sa bude pravdepodobne experiment predvádzať.
 
 ## Zapojenie
-![Zapojenie detektora pádu](https://github.com/alexandervalach/amavet-arduino-experiments/raw/main/03%20-%20Detekcia%20p%C3%A1du/Obr%C3%A1zky/detektor%20padu%20-%20akcelerometer%20%2B%20bzuciak.jpg)
 
 ## Pridanie kódu
-Pri kalibrácii dbáme na to, aby bolo zariadenie vo vodorovnej polohe na pevnej podložke. Inak by mohlo dôjsť ku chybnej kalibrácii a referečná (vodorovná) poloha by teda nebola správne určená. V takom prípade by sa napr. za voľný pád mohlo brať práve uloženie do vodorovnej polohy.
-
-- Pozn.
-Na nahrávanie skompilované kódu na zariadenie používame USB kábel
+V kóde je dôležité kvôli demonštrácii stanoviť, kedy sa má LED dióda rozsvietiť.
 
 ## Jav
-Keď sa zmení zrýchlenie na osiach a zároveň aj poloha gyroskopu, môžeme uvažovať, že nastal voľný pád zariadenia. 
-
-- Pozn.
-Zariadenie testujeme najlepšie v plastovej krabičke pripojené na externý zdroj napájania, napr. 9 V batériu
+V prípade vlhkého prostredia sa LED dióda rozsvieti. 
+Keď je snímač voľne ponechaný alebo je v suchom prostredí, tak LED dióda nie je rozsvietená.
 
 ## Vysvetlenie javu
-Zmena zrýchlenia môže znamenáť voľný pád osoby.
+Medzi oboma snímačmi (nožičky senzora) sa vytvorí elektrický prúd. 
+Senzor meria odpor pôdy, ktorý takto vzniká.
+V prípade vlhkeho prostredia je odpor (R, Ohm) veľmi nízky.
+V prípade suchého prostredia je odpor (R, Ohm) vysoký. 
