@@ -20,6 +20,7 @@ Preto je dôležité uchovávať ho v obale (napr. plastovom púzde, v ktorom bo
 
 ## Komponenty
 ### Senzor na meranie vlhkosti pôdy (ER-SPM32100S)
+![Senzor na meranie vlhkosti pôdy, ER-SPM32100S](https://github.com/alexandervalach/amavet-arduino-experiments/blob/198185ad4db478862237ccaa665cbed04f9f1a9d/06%20-%20Meranie%20vlhkosti%20p%C3%B4dy/Obr%C3%A1zky/senzor%20na%20meranie%20vlhkosti%20pody.jpg)
 
 ### LED dióda
 Je dobré použiť farbu, ktorá je viditeľná na otvorenom svetle, kde sa bude pravdepodobne experiment predvádzať.
